@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider, ColorModeScript, extendTheme, useColorMode, type ThemeConfig } from '@chakra-ui/react'
 import { useEffect } from 'react';
 
-localStorage.setItem('chakra-ui-color-mode', 'dark');
+window.localStorage.setItem('chakra-ui-color-mode', 'dark');
 
 
 function MyApp({ Component, pageProps }: AppProps) {
