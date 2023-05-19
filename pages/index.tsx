@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   
 
   return <Center p="50px">
-    <Grid gap={4} templateRows={'repeat(3, 1fr)'} templateColumns='repeat(2, 1fr)'>  
+    <Grid gap={4} templateRows={'repeat(3, 1fr)'} templateColumns='repeat(2, 1fr)' w='1200px'>  
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <CardsArea suits={suits} ranks={ranks} dealtHand={dealtHand} flop={flop} turn={turn} river={river} />
       <ActionField />
