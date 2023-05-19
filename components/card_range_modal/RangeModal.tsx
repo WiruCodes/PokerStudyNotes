@@ -281,7 +281,7 @@ function RangeModal(passedRange: any) {
       })
 
       // console.log(gridCollection)
-      return(<Grid onContextMenu={(e)=> e.preventDefault()} textAlign="center" fontStyle="Bold" fontWeight="600" display="flex" justifyContent="center" templateRows={'repeat(1, 1fr)'} templateColumns={'repeat(13, 1fr)'}>{rangeCol}</Grid>);
+      return(<Grid key={`range_${i}_collection`} onContextMenu={(e)=> e.preventDefault()} textAlign="center" fontStyle="Bold" fontWeight="600" display="flex" justifyContent="center" templateRows={'repeat(1, 1fr)'} templateColumns={'repeat(13, 1fr)'}>{rangeCol}</Grid>);
     })}</>
   }
   
