@@ -3,7 +3,15 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider, ColorModeScript, extendTheme, useColorMode, type ThemeConfig } from '@chakra-ui/react'
 import { useEffect } from 'react';
 
-window.localStorage.setItem('chakra-ui-color-mode', 'dark');
+// localStorage.setItem('chakra-ui-color-mode', 'dark');
+// 2. Add your color mode config
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
+
+// 3. extend the theme
+const theme = extendTheme({ config })
 
 
 function MyApp({ Component, pageProps }: AppProps) {

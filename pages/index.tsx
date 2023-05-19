@@ -4,6 +4,16 @@ import CardsArea from '../components/Sections/CardsArea';
 import { Box, Center, Container, Grid, HStack, VStack } from '@chakra-ui/react';
 import ActionField from '../components/Sections/ActionField';
 import { CardType } from '../library/Card/CardTypes';
+import { ChakraProvider, ColorModeScript, extendTheme, useColorMode, type ThemeConfig } from '@chakra-ui/react'
+
+
+const config: ThemeConfig = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+}
+
+
+const theme = extendTheme({ config })
 
 const Home: NextPage = () => {
 
@@ -20,6 +30,7 @@ const Home: NextPage = () => {
 
   return <Center p="50px">
     <Grid gap={4} templateRows={'repeat(3, 1fr)'} templateColumns='repeat(2, 1fr)'>  
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <CardsArea suits={suits} ranks={ranks} dealtHand={dealtHand} flop={flop} turn={turn} river={river} />
       <ActionField />
     </Grid>
